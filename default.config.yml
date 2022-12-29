@@ -83,7 +83,7 @@ post_provision_tasks: []
 
 # powerlevel10k
 configure_powerlevel10k: true
-p10k_config_file_url: "https://raw.githubusercontent.com/sculley/iterm2-setup/main/.p10k.zsh"
+p10k_config_file_url: "https://raw.githubusercontent.com/sculley/dotfiles/main/.p10k.zsh"
 
 # iterm2
 configure_iterm2: true
