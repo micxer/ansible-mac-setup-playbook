@@ -18,12 +18,12 @@ dockitems_persist: []
 configure_dotfiles: true
 dotfiles_repo_raw_path: "https://raw.githubusercontent.com/sculley/dotfiles"
 dotfiles_files: []
-  # - .zshrc
-  # - .aliases
-  # - .gitconfig
-  # - .inputrc
-  # - .macos
-  # - .vimrc
+# - .zshrc
+# - .aliases
+# - .gitconfig
+# - .inputrc
+# - .macos
+# - .vimrc
 
 # homebrew
 homebrew_installed_packages:
@@ -52,7 +52,7 @@ homebrew_cask_apps:
 # mas (Mac App Store)
 mas_enabled: false
 mas_installed_apps: []
-  # - {id: 1448916662, name: "Step Two (3.1.1)"}
+# - {id: 1448916662, name: "Step Two (3.1.1)"}
 
 # osx scripts
 configure_osx: true
