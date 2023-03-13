@@ -55,8 +55,8 @@ mas_installed_apps: []
 # - {id: 1448916662, name: "Step Two (3.1.1)"}
 
 # osx scripts
-configure_osx: true
-osx_script: "~/.macos --no-restart"
+configure_macos: true
+macos_script: "~/.macos --no-restart"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
