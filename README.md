@@ -26,7 +26,7 @@ periodically on existing Mac's.
 ### Running a specific set of tagged tasks
 
 You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s
-`--tags` flag. The tags available are `dotfiles`, `homebrew`, `mas`, `extra-packages` and `osx`.
+`--tags` flag. The tags available are `dotfiles`, `homebrew`, `mas`, `extra-packages` and `macos`.
 
     ansible-playbook main.yml -K --tags "dotfiles,homebrew"
 

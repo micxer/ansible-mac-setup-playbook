@@ -54,7 +54,7 @@ mas_enabled: false
 mas_installed_apps: []
 # - {id: 1448916662, name: "Step Two (3.1.1)"}
 
-# osx scripts
+# macOS scripts
 configure_macos: true
 macos_script: "~/.macos --no-restart"
 

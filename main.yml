@@ -45,10 +45,10 @@
       tags: ['vscode_extensions']
 
   tasks:
-    - name: Run OSX tasks
-      ansible.builtin.include_tasks: tasks/osx.yml
-      when: configure_osx
-      tags: ['osx']
+    - name: Run macOS tasks
+      ansible.builtin.include_tasks: tasks/macos.yml
+      when: configure_macos
+      tags: ['macos']
 
     - name: Install extra packages
       ansible.builtin.include_tasks: tasks/extra-packages.yml
