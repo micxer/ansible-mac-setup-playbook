@@ -2,26 +2,31 @@
 
 <img src="files/mac-setup.jpeg" width="500" alt="Mac Dev Playbook Logo" />
 
-This playbook setups and configures Mac's in an automated and standard way, it should be run on new Mac's and periodically on existing Mac's.
+This playbook setups and configures Mac's in an automated and standard way, it should be run on new Mac's and
+periodically on existing Mac's.
 
 ## Installation
 
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
   2. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
 
-     1. Run the following command to add Python 3 to your $PATH: `export PATH="/opt/homebrew/bin:$HOME/Library/Python/3.9/bin:$PATH"`
+     1. Run the following command to add Python 3 to your $PATH: `export
+        PATH="/opt/homebrew/bin:$HOME/Library/Python/3.9/bin:$PATH"`
      2. Upgrade Pip: `sudo pip3 install --upgrade pip`
      3. Install Ansible: `pip3 install ansible`
 
   3. Clone or download this repository to your local drive.
   4. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
-  5. Run `ansible-playbook main.yml -K` inside this directory. Enter your macOS account password when prompted for the 'BECOME' password.
+  5. Run `ansible-playbook main.yml -K` inside this directory. Enter your macOS account password when prompted for the
+     'BECOME' password.
 
-> Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
+> Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run
+> `brew doctor` to see if this is the case.
 
 ### Running a specific set of tagged tasks
 
-You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag. The tags available are `dotfiles`, `homebrew`, `mas`, `extra-packages` and `osx`.
+You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s
+`--tags` flag. The tags available are `dotfiles`, `homebrew`, `mas`, `extra-packages` and `osx`.
 
     ansible-playbook main.yml -K --tags "dotfiles,homebrew"
 
@@ -29,7 +34,8 @@ You can filter which part of the provisioning process to run by specifying a set
 
 Not everyone's development environment and preferred software configuration is the same.
 
-You can override any of the defaults configured in `default.config.yml` by creating a `config.yml` file and setting the overrides in that file. For example, you can customize the installed packages and apps with something like:
+You can override any of the defaults configured in `default.config.yml` by creating a `config.yml` file and setting the
+overrides in that file. For example, you can customize the installed packages and apps with something like:
 
 ```yaml
 homebrew_installed_packages:
@@ -68,7 +74,8 @@ dockitems_persist:
     pos: 5
 ```
 
-Any variable can be overridden in `config.yml`; see the supporting roles' documentation for a complete list of available variables.
+Any variable can be overridden in `config.yml`; see the supporting roles' documentation for a complete list of available
+variables.
 
 ## Included Applications / Configuration (Default)
 
@@ -119,7 +126,9 @@ Packages (installed with Homebrew):
   - pv
   - wget
 
-My [dotfiles](https://github.com/sculley/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
+My [dotfiles](https://github.com/micxer/dotfiles) are also installed into the current user's home directory, including
+the `.macos` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable
+dotfiles management by setting `configure_dotfiles: no` in your configuration.
 
 Finally, there are a few other preferences and settings added on for various apps and services.
 
@@ -127,7 +136,8 @@ Finally, there are a few other preferences and settings added on for various app
 
 ### Things that still need to be done manually
 
-It's my hope that I can get the rest of these things wrapped up into Ansible playbooks soon, but for now, these steps need to be completed manually (assuming you already have Xcode and Ansible installed, and have run this playbook).
+It's my hope that I can get the rest of these things wrapped up into Ansible playbooks soon, but for now, these steps
+need to be completed manually (assuming you already have Xcode and Ansible installed, and have run this playbook).
 
   1. Set JJG-Term as the default Terminal theme (it's installed, but not set as default automatically).
   3. Install all the apps that aren't yet in this setup (see below).
@@ -150,13 +160,19 @@ It's my hope that I can get the rest of these things wrapped up into Ansible pla
 
 ## Testing the Playbook
 
-Many people have asked me if I often wipe my entire workstation and start from scratch just to test changes to the playbook. Nope! Instead, I posted instructions for how I build a [Mac OS X VirtualBox VM](https://github.com/sculley/mac-osx-virtualbox-vm), on which I can continually run and re-run this playbook to test changes and make sure things work correctly.
+Many people have asked me if I often wipe my entire workstation and start from scratch just to test changes to the
+playbook. Nope! Instead, I posted instructions for how I build a [Mac OS X VirtualBox
+VM](https://github.com/sculley/mac-osx-virtualbox-vm), on which I can continually run and re-run this playbook to test
+changes and make sure things work correctly.
 
-Additionally, this project is [continuously tested on GitHub Actions' macOS infrastructure](https://github.com/sculley/mac-dev-playbook/actions?query=workflow%3ACI).
+Additionally, this project is [continuously tested on GitHub Actions' macOS
+infrastructure](https://github.com/sculley/mac-dev-playbook/actions?query=workflow%3ACI).
 
 ## Author
 
-This project is maintained and managed by [Sam Culley](https://github.com/sculley) and originally created by [Jeff Geerling](https://www.jeffgeerling.com/) (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).
+This project is maintained and managed by [Michael Weinrich](https://github.com/micxer) and originally created by [Sam Culley](https://github.com/sculley) and [Jeff
+Geerling](https://www.jeffgeerling.com/) (originally inspired by
+[MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).
 
-[badge-gh-actions]: https://github.com/sculley/mac-dev-playbook/workflows/CI/badge.svg?event=push
-[link-gh-actions]: https://github.com/sculley/mac-dev-playbook/actions?query=workflow%3ACI
+[badge-gh-actions]: https://github.com/micxer/mac-dev-playbook/workflows/CI/badge.svg?event=push [link-gh-actions]:
+https://github.com/micxer/mac-dev-playbook/actions?query=workflow%3ACI
