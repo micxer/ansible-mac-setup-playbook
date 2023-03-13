@@ -15,7 +15,7 @@ dockitems_persist: []
 #   pos: 5
 
 # dotfiles
-configure_dotfiles: true
+configure_dotfiles: false
 dotfiles_repo_raw_path: "https://raw.githubusercontent.com/micxer/dotfiles"
 dotfiles_files: []
 # - .zshrc
