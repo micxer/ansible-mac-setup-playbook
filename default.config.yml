@@ -16,7 +16,7 @@ dockitems_persist: []
 
 # dotfiles
 configure_dotfiles: true
-dotfiles_repo_raw_path: "https://raw.githubusercontent.com/sculley/dotfiles"
+dotfiles_repo_raw_path: "https://raw.githubusercontent.com/micxer/dotfiles"
 dotfiles_files: []
 # - .zshrc
 # - .aliases
@@ -70,16 +70,16 @@ pip_packages: []
 post_provision_tasks: []
 
 # powerlevel10k
-configure_powerlevel10k: true
+configure_powerlevel10k: false
 p10k_config_file_url: "https://raw.githubusercontent.com/sculley/dotfiles/main/.p10k.zsh"
 
 # iterm2
-configure_iterm2: true
+configure_iterm2: false
 iterm2_font_urls:
   - https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
 iterm2_dynamic_profile_urls:
   - https://raw.githubusercontent.com/sculley/iterm2-setup/main/MacOS-iTerm2.json
-iterm2_shell_integration: true
+iterm2_shell_integration: false
 iterm2_set_dynamic_default_profile_script_url: "https://raw.githubusercontent.com/sculley/iterm2-setup/main/set-dynamic-default-profile.py"
 iterm2_set_dynamic_default_profile_script_name: "set-dynamic-default-profile.py"
 
