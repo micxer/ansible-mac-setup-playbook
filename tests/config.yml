@@ -7,3 +7,5 @@ homebrew_installed_packages:
 
 homebrew_cask_apps:
   - firefox
+
+configure_dotfiles: false
